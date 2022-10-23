@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(#808080, #696969, #585858, #484848) no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: #00ff7f;
+    font-weight: bold;
+    font-size: 38px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}
+
+.grid-item {
+    margin: 20px;
+    padding: 2px;
+    border: 4px solid #00FF7F;
+    box-shadow: 3px 3px 7px #fff, -3px -3px 7px #fff;
+    transition: 0.2s linear;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+.grid {
+    background: linear-gradient(#98FB98, #90EE90, #00FF7F);
+    border: 5px solid #fff;
+    box-shadow: inset 3px 3px 7px #00FF7F, inset -3px -3px 7px #00FF7F;
+    padding: 6px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.5em;
+}
+
+.grid div span {
+    color: #000;
+} 
+
+.grid div a {
+    color: #000;
+}
+
+@media screen and (max-width: 1100px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 100%;
+    }
+}
