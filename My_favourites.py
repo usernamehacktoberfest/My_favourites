@@ -20,3 +20,36 @@ if __name__ == "main":
     link = "www.linkedin.com/in/umakshi-sharma-163302206"
     web = "CodeStudio"
     app = "PyCharm"
+
+    # Python program to find nth magic number
+ 
+# Function to find nth magic number
+def nthMagicNo(n):
+ 
+    pow = 1
+    answer = 0
+ 
+    # Go through every bit of n
+    while (n):
+ 
+        pow = pow*5
+ 
+        # If last bit of n is set
+        if (n & 1):
+            answer += pow
+ 
+        # proceed to next bit
+        n >>= 1 # or n = n/2
+     
+    return answer
+ 
+ 
+# Driver program to test above function
+n = 5
+print("nth magic number is", nthMagicNo(n))
+
+Input: n = 2
+Output: 25
+
+Input: n = 5
+Output: 130 
